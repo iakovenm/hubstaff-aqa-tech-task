@@ -1,0 +1,37 @@
+{
+  // Specifies the environments your code is designed to run in.
+  // This enables global variables specific to those environments.
+  "env": {
+    "browser": true, // Enables browser global variables like `window` and `document`.
+    "es2021": true,  // Enables ES2021 globals and syntax.
+    "node": true     // Enables Node.js global variables like `process` and `module`.
+  },
+
+  // Extends base configurations to inherit recommended rules.
+  "extends": [
+    "eslint:recommended", // Uses ESLint's recommended rules.
+    "plugin:playwright/recommended" // Adds recommended rules for Playwright testing.
+  ],
+
+  // Specifies the parser options for ESLint to understand your code.
+  "parserOptions": {
+    "ecmaVersion": "latest", // Allows the latest ECMAScript syntax.
+    "sourceType": "module"   // Enables ES module syntax (e.g., `import` and `export`).
+  },
+
+  // Specifies additional plugins to enhance linting capabilities.
+  "plugins": [
+    "playwright" // Adds Playwright-specific linting rules.
+  ],
+
+  // Custom rules to override or extend the default behavior.
+  "rules": {
+    "no-unused-vars": "warn", // Warns about variables that are declared but not used.
+    "no-console": [
+      "warn", // Warns when `console` is used, except for the allowed methods.
+      { "allow": ["warn", "error", "info", "debug"] } // Allows specific `console` methods.
+    ],
+    "quotes": ["error", "single"], // Enforces the use of single quotes for strings.
+    "semi": ["error", "always"]   // Requires semicolons at the end of statements.
+  }
+}

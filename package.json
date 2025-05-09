@@ -1,0 +1,17 @@
+{
+  "name": "hubstaff-aqa-tech-task",
+  "description": "Hubstaff AQA Tech Task - Playwright Automation Framework",
+  "scripts": {
+    "test": "playwright test",
+    "test:headed": "playwright test --headed",
+    "test:debug": "playwright test --debug"
+
+  },
+  "dependencies": {
+    "@playwright/test": "^1.40.0",
+    "dotenv": "^16.5.0",
+    "eslint": "^8.56.0",
+    "eslint-plugin-playwright": "^0.15.3",
+    "mailslurp-client": "^15.21.0"
+  }
+}
