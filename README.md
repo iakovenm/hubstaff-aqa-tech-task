@@ -16,7 +16,7 @@ This framework is a robust and scalable solution for automation tech task for Hu
 2. Install the required dependencies using `npm install`.
 3. Install the necessary browsers for Playwright.
 4. Create a `.env` file and configure the following variables:
-   - `EMAIL_API_KEY`: Your MailSlurp email API key.
+- `EMAIL_API_KEY`: Your MailSlurp email API key.
 
 ## 🔍 Build and Test on a local machine
 
@@ -59,12 +59,7 @@ To use the data generation feature, you can utilize the following methods:
 ## 🔒 Security Recommendations
 
 - Avoid committing sensitive data like API keys to the repository.
-- Use `.env` files for local development and add them to `.gitignore`(for test task purpose it was commited to repo for better visibility)
+- Use `.env` files for local development and add them to `.gitignore`
 - Store sensitive information in GitHub Secrets or other secret storages for CI/CD pipelines. For current implementation the following secrets need to be set up on Github in order to be able to run tests in Github Actions:
  
- EMAIL_API_KEY: ${{ secrets.EMAIL_API_KEY }}
- TEST_USER_EMAIL: ${{ secrets.TEST_USER_EMAIL }}
- TEST_USER_PASSWORD: ${{ secrets.TEST_USER_PASSWORD }}
- TEST_USER_FIRST_NAME: ${{ secrets.TEST_USER_FIRST_NAME }}
- TEST_USER_LAST_NAME: ${{ secrets.TEST_USER_LAST_NAME }}
- UPLOADCARE_PUB_KEY: {{ secrets.UPLOADCARE_PUB_KEY }}
+ EMAIL_API_KEY, TEST_USER_EMAIL, TEST_USER_PASSWORD, TEST_USER_FIRST_NAME, TEST_USER_LAST_NAME, UPLOADCARE_PUB_KEY
